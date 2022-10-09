@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <link rel="stylesheet" href="static/css/calculateStyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Калькултор отпускных</title>
+</head>
+<body>
+<div class="text-center" id="mf">
+    <div class="m-auto align-center container" id="main">
+        <h2 class="mb-3">Калькулятор отпускных</h2>
+        <form method="post" action="/calculate">
+        <div class="row">
+            <div class="col-sm">
+                <label for="salary" class="form-label" >Средняя зарплата</label>
+                <input id="salary" class="form-control" type="number" name="salary" required>
+            </div>
+            <div class="col-sm">
+                <label for="days" class="form-label">Количество дней отпуска</label>
+                <input id="days" class="form-control" type="number" name="days" required>
+            </div>
+        </div>
+        <label for="date">Выберите дату ухода в отпуск:</label>
+        <input type="date" class="form-control" id="date" name="date">
+        <button class="btn btn-primary btn-lg mt-3" id="bt" type="submit">Рассчитать</button>
+        </form>
+    </div>
+    <b><div th:text="${message}" class="align-center mt-3 m-auto" id="calc" th:if="${message!=null}">
+    </div></b>
+</div>
+</body>
+<footer><p>By Levin Sergey</p></footer>
+</html>
