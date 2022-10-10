@@ -1,7 +1,7 @@
 #main{
     max-width: 500px !important;
     border-color: #ee8414;
-    background: linear-gradient(45deg, #3e1162, #58418f);
+    background: linear-gradient(45deg, #7f44ad, #967dc7);
     padding: 7px;
     border-radius: 10px;
     border-style: solid;
@@ -17,11 +17,11 @@ body{
     color: black !important;
 }
 #bt{
-    background: linear-gradient(45deg, #3e1162, #58418f);
+    background: linear-gradient(45deg, #7f44ad, #967dc7);
     border-color: black !important;
 }
 input{
-    background-color: #644d8f !important;
+    background-color: #bcb2d0 !important;
     border-color: black !important;
 }
 p{
@@ -33,7 +33,7 @@ p{
 #calc{
     max-width: 500px !important;
     border-color: #ee8414;
-    background: linear-gradient(45deg, #3e1162, #58418f);
+    background: linear-gradient(45deg, #7f44ad, #967dc7);
     padding: 7px;
     border-radius: 10px;
     border-style: solid;

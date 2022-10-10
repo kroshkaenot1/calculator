@@ -19,8 +19,10 @@ public class CalculateController {
     private String calculate(@RequestParam(value = "salary") int salary,
                              @RequestParam(value = "days") int days,
                              @RequestParam(value = "date",required = false) String date, Model model){
+
         String vacPay = calculateService.calculateVacationPay(salary,days,date);
-        String message = "Ваша сумма отпускных составит: " + vacPay;
+
+        String message = "Ваша сумма отпускных составит: " + vacPay + "руб.";
         model.addAttribute("message",message);
         return "calculate";
     }

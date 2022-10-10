@@ -8,8 +8,8 @@ import java.time.LocalDate;
 
 @Service
 public class CalculateService {
-    public String calculateVacationPay(int salary,int days,String date){
-        if(date!="") {
+    public String calculateVacationPay(int salary,int days,String date){ //функция подсчитывает количество выходных выпадаемых на отпуск, но не совсем понятно зачем учитывать выходные,
+        if(date!="") {                                                   //так как отпускные за выходные выплачиваются так же как и за рабочие дни
             String[] a = date.split("-");
 
             int year = Integer.parseInt(a[0]);
@@ -23,7 +23,6 @@ public class CalculateService {
                 }
                 d = d.plusDays(1);
             }
-            days = days - count;
         }
         DecimalFormat decimalFormat = new DecimalFormat( "#.###" );
         double vacPay = (salary*12)/12/29.3 * days;
