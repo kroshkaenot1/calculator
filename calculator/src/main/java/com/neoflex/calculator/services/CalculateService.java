@@ -12,23 +12,25 @@ public class CalculateService {
             String[] a = date.split("-");
             //Праздничные дни
             LocalDate JanuaryHolidaysStart  = LocalDate.of(2022,1,1);
-            LocalDate JanuaryHolidaysEnd  = LocalDate.of(2022,1,8);
+            LocalDate JanuaryHolidaysEnd  = LocalDate.of(2022,1,9);
 
-            LocalDate FebruaryHolidaysStart  = LocalDate.of(2022,2,22);
-            LocalDate FebruaryHolidaysEnd  = LocalDate.of(2022,2,24);
+            LocalDate FebruaryHolidayDay  = LocalDate.of(2022,2,23);
 
-            LocalDate MarchHolidaysStart  = LocalDate.of(2022,3,7);
-            LocalDate MarchHolidaysEnd  = LocalDate.of(2022,3,9);
+            LocalDate MarchHolidaysStart  = LocalDate.of(2022,3,6);
+            LocalDate MarchHolidaysEnd  = LocalDate.of(2022,3,8);
+
+            LocalDate AprilHolidayDay = LocalDate.of(2022,4,30);
 
             LocalDate MayHolidaysStart  = LocalDate.of(2022,5,1);
-            LocalDate MayHolidaysEnd = LocalDate.of(2022,5,5);
-            LocalDate MayHolidaysStart1  = LocalDate.of(2022,5,9);
-            LocalDate MayHolidaysEnd1  = LocalDate.of(2022,5,11);
+            LocalDate MayHolidaysEnd = LocalDate.of(2022,5,3);
+            LocalDate MayHolidaysStart1  = LocalDate.of(2022,5,7);
+            LocalDate MayHolidaysEnd1  = LocalDate.of(2022,5,10);
 
-            LocalDate JuneHolidaysStart  = LocalDate.of(2022,6,12);
-            LocalDate JuneHolidaysEnd  = LocalDate.of(2022,6,14);
+            LocalDate JuneHolidaysStart  = LocalDate.of(2022,6,11);
+            LocalDate JuneHolidaysEnd  = LocalDate.of(2022,6,13);
 
-            LocalDate NovemberHolidayDay  = LocalDate.of(2022,11,4);
+            LocalDate NovemberHolidaysStart  = LocalDate.of(2022,11,4);
+            LocalDate NovemberHolidaysEnd  = LocalDate.of(2022,11,6);
 
             int year = Integer.parseInt(a[0]);
             int day = Integer.parseInt(a[2]);
@@ -41,8 +43,13 @@ public class CalculateService {
                         count++;
                     }
                 }
-                if(d.getMonthValue()==FebruaryHolidaysStart.getMonthValue()){
-                    if(d.getDayOfMonth()>=FebruaryHolidaysStart.getDayOfMonth() && d.getDayOfMonth()<=FebruaryHolidaysEnd.getDayOfMonth()){
+                if(d.getMonthValue()==FebruaryHolidayDay.getMonthValue()){
+                    if(d.getDayOfMonth()==FebruaryHolidayDay.getDayOfMonth()){
+                        count++;
+                    }
+                }
+                if(d.getMonthValue()==AprilHolidayDay.getMonthValue()){
+                    if(d.getDayOfMonth()==AprilHolidayDay.getDayOfMonth()){
                         count++;
                     }
                 }
@@ -62,8 +69,8 @@ public class CalculateService {
                         count++;
                     }
                 }
-                if(d.getMonthValue()==NovemberHolidayDay.getMonthValue()){
-                    if(d.getDayOfMonth()==NovemberHolidayDay.getDayOfMonth()){
+                if(d.getMonthValue()==NovemberHolidaysStart.getMonthValue()){
+                    if(d.getDayOfMonth()>=NovemberHolidaysStart.getDayOfMonth() && d.getDayOfMonth()<=NovemberHolidaysEnd.getDayOfMonth()){
                         count++;
                     }
                 }
